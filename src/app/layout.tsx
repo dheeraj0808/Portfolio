@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title: "Dheeraj Singh | Backend Software Engineer",
   description:
     "Backend-focused Software Engineer at Epic Web Service. Node.js, Express, MySQL, JWT auth systems — exploring Expo and system design.",
-  metadataBase: new URL("https://github.com/dheeraj0808"),
+  metadataBase: new URL("https://dheerajsinghportfolio.vercel.app"),
   openGraph: {
     title: "Dheeraj Singh | Backend Software Engineer",
     description:

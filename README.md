@@ -2,6 +2,8 @@
 
 Personal portfolio for **[Dheeraj Singh](https://github.com/dheeraj0808)** — Backend-focused Software Engineer at **Epic Web Service**.
 
+**Live:** [https://dheerajsinghportfolio.vercel.app/](https://dheerajsinghportfolio.vercel.app/)
+
 Built with **Next.js 16** (App Router) + TypeScript. No separate backend: content is curated in-repo and enriched from the GitHub API.
 
 ## Highlights
@@ -21,8 +23,9 @@ npm run dev
 
 | URL | What |
 |-----|------|
-| [http://localhost:3000](http://localhost:3000) | Homepage |
-| [http://localhost:3000/resume](http://localhost:3000/resume) | Resume viewer + PDF download |
+| [https://dheerajsinghportfolio.vercel.app/](https://dheerajsinghportfolio.vercel.app/) | **Production (live)** |
+| [http://localhost:3000](http://localhost:3000) | Local homepage |
+| [http://localhost:3000/resume](http://localhost:3000/resume) | Local resume viewer + PDF |
 
 ```bash
 npm run build   # production build
@@ -77,14 +80,15 @@ To update copy, edit `src/data/site.ts`. To replace the resume, overwrite `publi
 
 ## Deploy
 
-1. Push this repo to GitHub
-2. Import on [Vercel](https://vercel.com/) (Next.js preset)
-3. Deploy — no env vars required for the public site
+Already deployed on **Vercel**:
 
-Optional: set `metadataBase` in `src/app/layout.tsx` to your production URL for better Open Graph links.
+**https://dheerajsinghportfolio.vercel.app/**
+
+To redeploy: push to the connected GitHub branch — Vercel builds automatically. No env vars required for the public site.
 
 ## Links
 
+- **Live site:** [dheerajsinghportfolio.vercel.app](https://dheerajsinghportfolio.vercel.app/)
 - GitHub: [github.com/dheeraj0808](https://github.com/dheeraj0808)
 - NPM: [npmjs.com/~dheeraj08](https://www.npmjs.com/~dheeraj08)
 - Email: dheerajsingh1939@gmail.com
