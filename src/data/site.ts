@@ -5,15 +5,15 @@ export const site = {
   title: "Backend-Focused Software Engineer",
   company: "Epic Web Service",
   email: "dheerajsingh1939@gmail.com",
-  location: "India",
+  location: "Zirakpur, Punjab",
   github: "https://github.com/dheeraj0808",
   npm: "https://www.npmjs.com/~dheeraj08",
   hireable: true,
   tagline:
     "I design production NestJS backends, auth/payments systems, and India-focused open-source NPM packages — while exploring mobile and system design.",
   about: [
-    "Software Engineer at Epic Web Service. I shipped the Wenuru studio management platform backend — NestJS, TypeScript, Sequelize, 4-tier RBAC, Razorpay, and push notifications — serving 10+ studios.",
-    "I also publish zero-dependency NPM packages for India-specific developer use cases (rupee formatting, mobile validation, PIN codes, GSTIN). On the side I revise DSA and explore Expo.",
+    "Software Engineer L-1 at Epic Web Service (Zirakpur). I shipped the Wenuru studio management platform backend — NestJS, TypeScript, Sequelize, 4-tier RBAC, Razorpay, and push notifications — serving 10+ studios.",
+    "B.Tech (IT) from Chandigarh Engineering College, Landran (CGPA 8.1). I also publish zero-dependency NPM packages for India-specific developer use cases, and explore Expo on the side.",
   ],
   skills: {
     Backend: [
@@ -27,24 +27,85 @@ export const site = {
     ],
     Data: ["Sequelize", "MySQL / SQL", "MongoDB", "Query optimization"],
     Payments: ["Razorpay", "Webhooks", "Signature verification"],
-    Frontend: ["React", "Next.js", "JavaScript", "TypeScript"],
+    Frontend: ["React", "Next.js", "JavaScript", "TypeScript", "HTML5", "CSS"],
     OpenSource: ["NPM (dheeraj08)", "MIT packages", "Semantic versioning"],
     Exploring: ["Expo / React Native", "System design", "DSA"],
   },
   experience: [
     {
-      role: "Software Engineer",
       company: "Epic Web Service",
-      location: "India",
-      period: "2024 — Present",
-      points: [
-        "Designed and shipped a full studio management platform (Wenuru) serving 10+ studios with 20+ feature modules on NestJS, TypeScript, and Sequelize (SQL).",
-        "Architected 4-tier RBAC (Super Admin, Studio Owner, Manager, Crew) with JWT auth, guards, and studio-scoped permissions.",
-        "Integrated Razorpay with secure webhook handling for order capture, signature verification, and transaction reconciliation.",
-        "Built cross-platform push notifications with device token management (iOS/Android) and last-active tracking for targeted delivery.",
-        "Optimized Sequelize associations and high-traffic queries; enforced DTO validation and guard-level checks across routes.",
-        "Followed NestJS modular practices — providers, interceptors, exception filters — for maintainable production code.",
+      employmentType: "Full-time · On-site",
+      location: "Zirakpur, Punjab",
+      period: "Jun 2025 — Present",
+      tenure: "1 yr 3 mos",
+      roles: [
+        {
+          role: "Software Engineer L-1",
+          period: "Dec 2025 — Present",
+          skills: ["NestJS", "Node.js"],
+          points: [
+            "Designed and shipped Wenuru studio management platform serving 10+ studios with 20+ feature modules on NestJS, TypeScript, and Sequelize (SQL).",
+            "Architected 4-tier RBAC (Super Admin, Studio Owner, Manager, Crew) with JWT auth, guards, and studio-scoped permissions.",
+            "Integrated Razorpay with secure webhook handling for order capture, signature verification, and transaction reconciliation.",
+            "Built cross-platform push notifications with device token management (iOS/Android) and last-active tracking.",
+            "Optimized Sequelize associations and high-traffic queries; enforced DTO validation and guard-level checks across routes.",
+          ],
+        },
+        {
+          role: "Software Trainee",
+          period: "Jun 2025 — Dec 2025",
+          skills: ["HTML5", "CSS", "JavaScript"],
+          points: [
+            "Built foundational web UI skills (HTML5, CSS) while ramping onto the production Node.js / NestJS stack.",
+            "Contributed to internal tools and feature work under mentorship before promotion to Software Engineer L-1.",
+          ],
+        },
       ],
+    },
+    {
+      company: "SkillStone",
+      employmentType: "Semester Training · On-site",
+      location: "Chandigarh Engineering College, Landran",
+      period: "Jan 2025 — May 2025",
+      tenure: "5 mos",
+      roles: [
+        {
+          role: "Semester Training",
+          period: "Jan 2025 — May 2025",
+          skills: ["MERN Stack"],
+          points: [
+            "Completed semester training focused on the MERN stack (MongoDB, Express, React, Node.js).",
+            "Built and practiced full-stack application flows in an on-site college training program.",
+          ],
+        },
+      ],
+    },
+    {
+      company: "Solitaire Infosys Inc",
+      employmentType: "Summer Intern · Full-time · On-site",
+      location: "Chandigarh Engineering College",
+      period: "Jul 2023",
+      tenure: "1 mo",
+      roles: [
+        {
+          role: "Summer Intern",
+          period: "Jul 2023",
+          skills: ["HTML5", "CSS"],
+          points: [
+            "Summer internship focused on front-end fundamentals with HTML5 and CSS.",
+            "Gained early exposure to professional software delivery in an on-site setting.",
+          ],
+        },
+      ],
+    },
+  ],
+  education: [
+    {
+      school: "Chandigarh Engineering College",
+      degree: "Bachelor of Technology — BTech, Information Technology",
+      period: "Jun 2021 — Jun 2025",
+      grade: "8.1 CGPA",
+      location: "Landran (CGC)",
     },
   ],
   /** Production / featured projects shown first (may not be public GitHub repos) */

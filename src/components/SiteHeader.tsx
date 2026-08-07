@@ -13,6 +13,7 @@ export function SiteHeader() {
           <Link href="/#open-source">Open Source</Link>
           <Link href="/#about">About</Link>
           <Link href="/#experience">Experience</Link>
+          <Link href="/#education">Education</Link>
           <Link href="/#contact">Contact</Link>
         </nav>
         <div className="header-actions">

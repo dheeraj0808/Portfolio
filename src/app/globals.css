@@ -488,6 +488,18 @@ img {
   gap: 0.35rem;
 }
 
+.role-stack {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.role-block h4 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+
 /* Contact */
 .contact-panel {
   margin-top: 2.5rem;
