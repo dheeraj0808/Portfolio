@@ -10,10 +10,28 @@ export const site = {
   npm: "https://www.npmjs.com/~dheeraj08",
   hireable: true,
   tagline:
-    "I design production NestJS backends, auth/payments systems, and India-focused open-source NPM packages — while exploring mobile and system design.",
+    "Backend engineer shipping NestJS platforms — RBAC, payments, and data models that stay maintainable under real studio traffic.",
   about: [
-    "Software Engineer L-1 at Epic Web Service (Zirakpur). I shipped the Wenuru studio management platform backend — NestJS, TypeScript, Sequelize, 4-tier RBAC, Razorpay, and push notifications — serving 10+ studios.",
-    "B.Tech (IT) from Chandigarh Engineering College, Landran (CGPA 8.1). I also publish zero-dependency NPM packages for India-specific developer use cases, and explore Expo on the side.",
+    "Software Engineer L-1 at Epic Web Service (Zirakpur). I own backend systems for Wenuru: NestJS modules, Sequelize data models, JWT/RBAC, Razorpay webhooks, and push delivery for 10+ studios.",
+    "B.Tech (IT), Chandigarh Engineering College, Landran (8.1 CGPA). I publish India-focused NPM packages as dheeraj08 and keep sharpening system design + DSA.",
+  ],
+  systems: [
+    {
+      title: "Auth & RBAC",
+      body: "4-tier roles, JWT guards, and studio-scoped permissions so every route knows who can act.",
+    },
+    {
+      title: "Payments",
+      body: "Razorpay orders with signature-verified webhooks and reconciliation-safe capture flows.",
+    },
+    {
+      title: "Data layer",
+      body: "Sequelize associations tuned for high-traffic reads — less N+1, clearer domain boundaries.",
+    },
+    {
+      title: "Delivery",
+      body: "DTOs, interceptors, and exception filters so APIs fail loudly in the right place — not in production silence.",
+    },
   ],
   skills: {
     Backend: [
@@ -113,7 +131,7 @@ export const site = {
     {
       name: "Wenuru — Studio Management Platform",
       description:
-        "Full-fledged studio management platform for India's creative marketplace: book verified studios, manage listings, and run operations across 10+ studios with 20+ modules. Backend on NestJS + TypeScript + Sequelize with 4-tier RBAC, Razorpay payments, and push notifications.",
+        "Production backend for India's creative marketplace — 10+ studios, 20+ modules. NestJS + TypeScript + Sequelize powering bookings, RBAC, Razorpay, and push notifications.",
       url: "https://github.com/dheeraj0808",
       liveUrl: "https://staging.wenuru.com/",
       language: "TypeScript",
@@ -125,6 +143,12 @@ export const site = {
         "Razorpay webhooks",
         "Push notifications",
         "10+ studios",
+      ],
+      architecture: [
+        "Guards + JWT for Super Admin / Owner / Manager / Crew",
+        "Webhook signature verify → order capture → reconcile",
+        "Device tokens + last-active for targeted push",
+        "Modular Nest providers, DTOs, exception filters",
       ],
       pushedAt: "",
     },
@@ -163,16 +187,12 @@ export const site = {
       version: "1.0.1",
     },
   ],
-  /** GitHub repos to feature after Wenuru */
+  /** GitHub repos to feature after Wenuru — curated for backend signal only */
   showcase: [
     "Spotify-Backend",
     "UserVault",
     "Vaani",
-    "Social-platform",
-    "Spotify-frontend",
-    "my_daily_buddy_mobile",
-    "Bank-Transition-Backend",
-    "Dev-Tinder",
+    "gstin-utils",
   ] as const,
 };
 

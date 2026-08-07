@@ -21,6 +21,7 @@ export type Project = {
   stars: number;
   category: string;
   highlights: string[];
+  architecture?: string[];
   pushedAt: string;
 };
 

@@ -6,11 +6,11 @@ export function Experience() {
       <section className="section" id="experience">
         <div className="container">
           <p className="eyebrow">Experience</p>
-          <h2 className="h2">Where I&apos;ve worked</h2>
+          <h2 className="h2">Where I&apos;ve shipped</h2>
           <div className="timeline">
             {site.experience.map((job) => (
               <article key={job.company}>
-                <h3>{job.company}</h3>
+                <h3 className="h3">{job.company}</h3>
                 <p className="meta">
                   {job.employmentType}
                   {job.tenure ? ` · ${job.tenure}` : ""}
@@ -20,10 +20,10 @@ export function Experience() {
                 <div className="role-stack">
                   {job.roles.map((role) => (
                     <div key={`${job.company}-${role.role}`} className="role-block">
-                      <h4>{role.role}</h4>
+                      <h4 className="h4">{role.role}</h4>
                       <p className="meta">{role.period}</p>
                       {role.skills?.length > 0 && (
-                        <div className="tags" style={{ marginBottom: "0.5rem" }}>
+                        <div className="tags tags--tight">
                           {role.skills.map((skill) => (
                             <span key={skill} className="tag">
                               {skill}
@@ -52,19 +52,13 @@ export function Experience() {
           <div className="timeline">
             {site.education.map((edu) => (
               <article key={edu.school}>
-                <h3>{edu.school}</h3>
+                <h3 className="h3">{edu.school}</h3>
                 <p className="meta">
                   {edu.period}
                   {edu.location ? ` · ${edu.location}` : ""}
                 </p>
-                <p style={{ color: "var(--muted)", marginBottom: "0.35rem" }}>
-                  {edu.degree}
-                </p>
-                {edu.grade && (
-                  <p style={{ color: "var(--accent)", fontFamily: "var(--font-mono)", fontSize: "0.9rem" }}>
-                    Grade: {edu.grade}
-                  </p>
-                )}
+                <p className="edu-degree">{edu.degree}</p>
+                {edu.grade && <p className="edu-grade">Grade: {edu.grade}</p>}
               </article>
             ))}
           </div>

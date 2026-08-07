@@ -5,26 +5,20 @@ export function OpenSource() {
     <section className="section" id="open-source">
       <div className="container">
         <p className="eyebrow">Open source · npm @{site.npmHandle}</p>
-        <h2 className="h2">India-focused NPM packages</h2>
+        <h2 className="h2">Libraries recruiters can npm install</h2>
         <p className="lead">
           Four zero-dependency packages published as{" "}
-          <a
-            href={site.npm}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "var(--accent)", fontWeight: 600 }}
-          >
+          <a className="text-accent" href={site.npm} target="_blank" rel="noopener noreferrer">
             dheeraj08
           </a>
           {" "}
-          — with MIT licensing, semantic versioning, and matching GitHub repos as
-          proof.
+          — MIT licensed, semver&apos;d, with GitHub sources as proof.
         </p>
         <div className="project-grid">
           {site.packages.map((pkg) => (
             <article key={pkg.name} className="project-card">
               <div className="project-card__top">
-                <h3>{pkg.name}</h3>
+                <h3 className="h3">{pkg.name}</h3>
                 <span className="pill">v{pkg.version}</span>
               </div>
               <p>{pkg.description}</p>

@@ -36,11 +36,12 @@ export function Hero() {
         <div className="portrait">
           <div className="portrait__frame">
             <Image
-              src="/profile.jpg"
+              src="/profile-dheeraj.jpg"
               alt={site.name}
-              width={760}
-              height={760}
+              width={682}
+              height={1024}
               priority
+              unoptimized
             />
           </div>
           <div className="portrait__badge">

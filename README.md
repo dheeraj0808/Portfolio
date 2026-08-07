@@ -39,7 +39,7 @@ npm run lint    # ESLint
 Portfolio/
 ├── public/
 │   ├── Dheeraj_Singh_Resume.pdf   # Downloadable resume
-│   └── profile.jpg
+│   └── profile-dheeraj.jpg
 ├── src/
 │   ├── app/
 │   │   ├── page.tsx               # Home

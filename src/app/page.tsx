@@ -1,5 +1,6 @@
 import { SiteHeader } from "@/components/SiteHeader";
 import { Hero } from "@/components/Hero";
+import { Systems } from "@/components/Systems";
 import { Projects } from "@/components/Projects";
 import { OpenSource } from "@/components/OpenSource";
 import { About } from "@/components/About";
@@ -27,6 +28,7 @@ export default async function HomePage() {
       <SiteHeader />
       <main>
         <Hero />
+        <Systems />
         <Projects projects={projects} />
         <OpenSource />
         <About languages={languages} publicRepos={publicRepos} />

@@ -5,57 +5,72 @@ export function Projects({ projects }: { projects: Project[] }) {
     <section className="section" id="work">
       <div className="container">
         <p className="eyebrow">Selected work</p>
-        <h2 className="h2">Featured projects</h2>
+        <h2 className="h2">Proof that ships</h2>
         <p className="lead">
-          Production platform first — then selected backends and apps from{" "}
-          github.com/dheeraj0808.
+          Production platform first. Then a short list of backends that show auth,
+          APIs, and data modeling — not every repo I have ever touched.
         </p>
         <div className="project-grid">
-          {projects.map((project, index) => (
-            <article
-              key={project.name}
-              className={`project-card${index === 0 ? " project-card--featured" : ""}`}
-            >
-              <div className="project-card__top">
-                <h3>{project.name}</h3>
-                <span className="pill">{project.category}</span>
-              </div>
-              <p>{project.description}</p>
-              {project.highlights.length > 0 && (
-                <div className="tags">
-                  {project.highlights.map((h) => (
-                    <span key={h} className="tag">
-                      {h}
-                    </span>
-                  ))}
-                  {project.language && (
-                    <span className="tag">{project.language}</span>
+          {projects.map((project, index) => {
+            const tags = [
+              ...project.highlights,
+              ...(project.language &&
+              !project.highlights.some(
+                (h) => h.toLowerCase() === project.language!.toLowerCase(),
+              )
+                ? [project.language]
+                : []),
+            ];
+
+            return (
+              <article
+                key={project.name}
+                className={`project-card${index === 0 ? " project-card--featured" : ""}`}
+              >
+                <div className="project-card__top">
+                  <h3 className="h3">{project.name}</h3>
+                  <span className="pill">{project.category}</span>
+                </div>
+                <p>{project.description}</p>
+                {project.architecture && project.architecture.length > 0 && (
+                  <ul className="arch-list">
+                    {project.architecture.map((line) => (
+                      <li key={line}>{line}</li>
+                    ))}
+                  </ul>
+                )}
+                {tags.length > 0 && (
+                  <div className="tags">
+                    {tags.map((h) => (
+                      <span key={h} className="tag">
+                        {h}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                <div className="project-card__links">
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Live →
+                    </a>
+                  )}
+                  {project.url && (
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {project.category === "Production" ? "Profile →" : "Source →"}
+                    </a>
                   )}
                 </div>
-              )}
-              <div className="project-card__links">
-                {project.liveUrl && (
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Live →
-                  </a>
-                )}
-                {project.url && project.category !== "Production" && (
-                  <a href={project.url} target="_blank" rel="noopener noreferrer">
-                    Source →
-                  </a>
-                )}
-                {project.category === "Production" && project.url && (
-                  <a href={project.url} target="_blank" rel="noopener noreferrer">
-                    GitHub →
-                  </a>
-                )}
-              </div>
-            </article>
-          ))}
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
