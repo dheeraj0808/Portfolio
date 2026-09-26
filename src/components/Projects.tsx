@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Project } from "@/lib/github";
 
 export function Projects({ projects }: { projects: Project[] }) {
@@ -32,6 +33,16 @@ export function Projects({ projects }: { projects: Project[] }) {
                   <span className="pill">{project.category}</span>
                 </div>
                 <p>{project.description}</p>
+                {project.metrics && project.metrics.length > 0 && (
+                  <div className="project-metrics">
+                    {project.metrics.map((m) => (
+                      <div key={m.label} className="project-metric">
+                        <span className="project-metric__value">{m.value}</span>
+                        <span className="project-metric__label">{m.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
                 {project.architecture && project.architecture.length > 0 && (
                   <ul className="arch-list">
                     {project.architecture.map((line) => (
@@ -49,13 +60,21 @@ export function Projects({ projects }: { projects: Project[] }) {
                   </div>
                 )}
                 <div className="project-card__links">
+                  {project.caseStudyUrl && (
+                    <Link
+                      href={project.caseStudyUrl}
+                      className="case-study-link"
+                    >
+                      Case Study (Deep Dive) →
+                    </Link>
+                  )}
                   {project.liveUrl && (
                     <a
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Live →
+                      {project.name.includes("Wenuru") ? "Live Marketplace →" : "Live →"}
                     </a>
                   )}
                   {project.url && (

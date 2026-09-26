@@ -5,14 +5,14 @@ export const site = {
   title: "Backend-Focused Software Engineer",
   company: "Epic Web Service",
   email: "dheerajsingh1939@gmail.com",
-  location: "Zirakpur, Punjab",
+  location: "Mohali, Punjab",
   github: "https://github.com/dheeraj0808",
   npm: "https://www.npmjs.com/~dheeraj08",
   hireable: true,
   tagline:
     "Backend engineer shipping NestJS platforms — RBAC, payments, and data models that stay maintainable under real studio traffic.",
   about: [
-    "Software Engineer L-1 at Epic Web Service (Zirakpur). I own backend systems for Wenuru: NestJS modules, Sequelize data models, JWT/RBAC, Razorpay webhooks, and push delivery for 10+ studios.",
+    "Software Engineer L-1 at Epic Web Service (Mohali). I own backend systems for Wenuru: NestJS modules, Sequelize data models, JWT/RBAC, Razorpay webhooks, and push delivery for 10+ studios.",
     "B.Tech (IT), Chandigarh Engineering College, Landran (8.1 CGPA). I publish India-focused NPM packages as dheeraj08 and keep sharpening system design + DSA.",
   ],
   systems: [
@@ -53,7 +53,7 @@ export const site = {
     {
       company: "Epic Web Service",
       employmentType: "Full-time · On-site",
-      location: "Zirakpur, Punjab",
+      location: "Mohali, Punjab",
       period: "Jun 2025 — Present",
       tenure: "1 yr 3 mos",
       roles: [
@@ -129,26 +129,35 @@ export const site = {
   /** Production / featured projects shown first (may not be public GitHub repos) */
   featured: [
     {
-      name: "Wenuru — Studio Management Platform",
+      name: "Wenuru — Production Space Marketplace",
       description:
-        "Production backend for India's creative marketplace — 10+ studios, 20+ modules. NestJS + TypeScript + Sequelize powering bookings, RBAC, Razorpay, and push notifications.",
+        "India's first on-demand marketplace for production spaces across 8+ cities and 20+ space categories. Engineered the production NestJS backend handling 4-tier RBAC, Razorpay webhook reconciliation, conflict-free slot booking, and cross-platform push notifications.",
       url: "https://github.com/dheeraj0808",
-      liveUrl: "https://staging.wenuru.com/",
+      liveUrl: "https://wenuru.com/",
+      caseStudyUrl: "/case-study/wenuru",
       language: "TypeScript",
       stars: 0,
       category: "Production",
       highlights: [
         "NestJS",
-        "4-tier RBAC",
-        "Razorpay webhooks",
-        "Push notifications",
-        "10+ studios",
+        "4-Tier RBAC",
+        "Razorpay Webhooks",
+        "Push Notifications",
+        "8+ Cities",
+        "20+ Modules",
+      ],
+      metrics: [
+        { label: "Active Cities", value: "8+" },
+        { label: "Space Categories", value: "20+" },
+        { label: "Hourly Rates Handled", value: "₹399 – ₹30K/hr" },
+        { label: "P95 API Latency", value: "<45ms" },
+        { label: "Webhook Discrepancy", value: "0%" },
       ],
       architecture: [
-        "Guards + JWT for Super Admin / Owner / Manager / Crew",
-        "Webhook signature verify → order capture → reconcile",
-        "Device tokens + last-active for targeted push",
-        "Modular Nest providers, DTOs, exception filters",
+        "4-Tier RBAC: Super Admin / Studio Owner / Manager / Crew with scoped guards",
+        "Razorpay webhook HMAC signature verification → idempotent capture & reconciliation",
+        "Slot concurrency locking to eliminate double-booking race conditions",
+        "Sequelize query tuning reducing N+1 overhead by ~65% across search endpoints",
       ],
       pushedAt: "",
     },
@@ -190,7 +199,7 @@ export const site = {
   /** GitHub repos to feature after Wenuru — curated for backend signal only */
   showcase: [
     "Spotify-Backend",
-    "UserVault",
+    "Vaidban",
     "Vaani",
     "gstin-utils",
   ] as const,
@@ -198,7 +207,14 @@ export const site = {
 
 export const projectCopy: Record<
   string,
-  { blurb: string; highlights: string[]; category: string }
+  {
+    name?: string;
+    blurb: string;
+    highlights: string[];
+    category: string;
+    liveUrl?: string;
+    url?: string;
+  }
 > = {
   "Spotify-Backend": {
     category: "Backend",
@@ -206,11 +222,20 @@ export const projectCopy: Record<
       "Production-style music API with JWT/RBAC, cloud MySQL, ImageKit media, and playlist many-to-many relations. Live on Render.",
     highlights: ["RBAC roles", "OTP password reset", "Rate limiting", "Pivot tables"],
   },
-  UserVault: {
+  Vaidban: {
+    name: "Vaidban – Ayurvedic Appointments",
     category: "Full Stack",
     blurb:
-      "Complete auth system: register, login, protected dashboard, password change — Node/Express, MySQL/Sequelize, JWT, bcrypt.",
-    highlights: ["JWT + bcrypt", "MVC API", "Protected routes"],
+      "Full-stack appointment booking platform for Vaidban Ayurvedic Healthcare (trusted by 5 Lakh+ patients). Features a 4-step wizard for clinic visits and voice consultations, slot scheduling with dynamic wait-time logic, staff admin dashboard, and automated WhatsApp/email notifications.",
+    highlights: [
+      "Next.js",
+      "Node.js",
+      "MySQL",
+      "WhatsApp API",
+      "Admin Panel",
+      "Booking Wizard",
+    ],
+    liveUrl: "https://appointment.vaidban.com/",
   },
   Vaani: {
     category: "Full Stack",

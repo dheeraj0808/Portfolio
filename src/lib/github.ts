@@ -17,6 +17,8 @@ export type Project = {
   description: string;
   url: string;
   liveUrl?: string;
+  caseStudyUrl?: string;
+  metrics?: { label: string; value: string }[];
   language: string | null;
   stars: number;
   category: string;
@@ -63,17 +65,18 @@ export async function getShowcaseProjects(): Promise<Project[]> {
     if (!repo && !copy) continue;
 
     const live =
-      name === "Spotify-Backend"
+      copy?.liveUrl ||
+      (name === "Spotify-Backend"
         ? "https://spotify-backend-3ouf.onrender.com/"
-        : repo?.homepage || undefined;
+        : repo?.homepage || undefined);
 
     projects.push({
-      name,
+      name: copy?.name || repo?.name || name,
       description:
         copy?.blurb ||
         repo?.description ||
         "Project from github.com/dheeraj0808",
-      url: repo?.html_url || `https://github.com/dheeraj0808/${name}`,
+      url: copy?.url || repo?.html_url || "",
       liveUrl: live || undefined,
       language: repo?.language ?? null,
       stars: repo?.stargazers_count ?? 0,
@@ -88,13 +91,14 @@ export async function getShowcaseProjects(): Promise<Project[]> {
       const copy = projectCopy[name];
       if (!copy) continue;
       projects.push({
-        name,
+        name: copy?.name || name,
         description: copy.blurb,
-        url: `https://github.com/dheeraj0808/${name}`,
+        url: copy?.url || (name === "Vaidban" ? "" : `https://github.com/dheeraj0808/${name}`),
         liveUrl:
-          name === "Spotify-Backend"
+          copy.liveUrl ||
+          (name === "Spotify-Backend"
             ? "https://spotify-backend-3ouf.onrender.com/"
-            : undefined,
+            : undefined),
         language: null,
         stars: 0,
         category: copy.category,

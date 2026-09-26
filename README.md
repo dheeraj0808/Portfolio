@@ -8,9 +8,9 @@ Built with **Next.js 16** (App Router) + TypeScript. No separate backend: conten
 
 ## Highlights
 
-- **Wenuru** featured first — studio management platform ([staging.wenuru.com](https://staging.wenuru.com/))
+- **Wenuru** featured first — India's production spaces marketplace ([wenuru.com](https://wenuru.com/))
 - **Open Source** section — 4 NPM packages published as [`dheeraj08`](https://www.npmjs.com/~dheeraj08)
-- Selected GitHub projects loaded via API (`Spotify-Backend`, `UserVault`, `Vaani`, …)
+- Selected production & open-source projects (`Spotify-Backend`, `Vaidban`, `Vaani`, …)
 - Resume: `/resume` embeds and downloads `public/Dheeraj_Singh_Resume.pdf`
 - Contact via `mailto:dheerajsingh1939@gmail.com`
 
@@ -67,9 +67,9 @@ To update copy, edit `src/data/site.ts`. To replace the resume, overwrite `publi
 
 ## Featured work
 
-1. **Wenuru — Studio Management Platform** — NestJS, TypeScript, Sequelize, 4-tier RBAC, Razorpay, push notifications · [Live](https://staging.wenuru.com/)
+1. **Wenuru — Production Space Marketplace** — NestJS, TypeScript, Sequelize, 4-tier RBAC, Razorpay, push notifications · [Live](https://wenuru.com/)
 2. **Open-source NPM (`dheeraj08`)** — `rupee-india`, `numindia`, `indian-pincode`, `gstin-utils`
-3. **GitHub showcase** — Spotify-Backend, UserVault, Vaani, and more
+3. **Featured projects** — Spotify-Backend, Vaidban, Vaani, and more
 
 ## Stack
 
