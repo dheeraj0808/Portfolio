@@ -238,10 +238,21 @@ export const projectCopy: Record<
     url: "https://github.com/dheeraj0808/my_daily_buddy_mobile",
   },
   "Spotify-Backend": {
+    name: "Spotify-Backend — Audio Streaming API",
     category: "Backend",
     blurb:
-      "Production-style music API with JWT/RBAC, cloud MySQL, ImageKit media, and playlist many-to-many relations. Live on Render.",
-    highlights: ["RBAC roles", "OTP password reset", "Rate limiting", "Pivot tables"],
+      "Production-style music streaming REST API architected with Node.js, Express, and cloud MySQL/Sequelize. Features multi-tier JWT & RBAC authorization, passwordless email OTP reset, rate-limiting middleware, junction tables for collaborative playlists, and ImageKit CDN media ingestion. Live on Render.",
+    highlights: [
+      "Node.js & Express",
+      "Cloud MySQL",
+      "RBAC & JWT",
+      "ImageKit CDN",
+      "Email OTP Reset",
+      "Pivot Relations",
+    ],
+    caseStudyUrl: "/case-study/spotify-backend",
+    liveUrl: "https://spotify-backend-3ouf.onrender.com/",
+    url: "https://github.com/dheeraj0808/Spotify-Backend",
   },
   Vaidban: {
     name: "Vaidban – Ayurvedic Appointments",
@@ -256,6 +267,7 @@ export const projectCopy: Record<
       "Admin Panel",
       "Booking Wizard",
     ],
+    caseStudyUrl: "/case-study/vaidban",
     liveUrl: "https://appointment.vaidban.com/",
   },
   Vaani: {
