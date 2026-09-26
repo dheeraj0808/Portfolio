@@ -2,7 +2,7 @@ export const site = {
   name: "Dheeraj Singh",
   handle: "dheeraj0808",
   npmHandle: "dheeraj08",
-  title: "Software Engineer",
+  title: "Software Engineer | Node.js · NestJS · TypeScript · React · SQL · AWS",
   company: "Epic Web Service",
   email: "dheerajsingh1939@gmail.com",
   location: "Mohali, Punjab",
@@ -10,7 +10,7 @@ export const site = {
   npm: "https://www.npmjs.com/~dheeraj08",
   hireable: true,
   tagline:
-    "Software Engineer who builds and ships production systems end to end in TypeScript — Node.js/NestJS backends and React/Next.js frontends.",
+    "Software Engineer who builds and ships production systems end to end in TypeScript — Node.js/NestJS backends, React/Next.js frontends, and AWS (Amazon Web Services) cloud infrastructure.",
   about: [
     "Software Engineer at Epic Web Service (Mohali). I build and ship production systems end to end in TypeScript — Node.js/NestJS backends, Sequelize/MySQL data models, and React/Next.js frontends.",
     "Shipped a 20+ module SaaS platform serving 200+ live studios, a live production spaces marketplace (Wenuru) with 1,000+ users, and 4 open-source npm packages with 1,000+ weekly downloads.",
@@ -29,12 +29,22 @@ export const site = {
       body: "Sequelize associations tuned for high-traffic reads — less N+1, clearer domain boundaries.",
     },
     {
-      title: "Delivery",
-      body: "DTOs, interceptors, and exception filters so APIs fail loudly in the right place — not in production silence.",
+      title: "Cloud & AWS",
+      body: "AWS (Amazon Web Services · EC2/Linux), Nginx reverse proxy, PM2 clustering, SSL, and GitHub Actions CI/CD.",
     },
   ],
   skills: {
-    Languages: ["TypeScript", "JavaScript (ES6+)", "SQL", "Java", "C++"],
+    "Cloud & AWS": [
+      "AWS (Amazon Web Services)",
+      "AWS EC2",
+      "AWS S3",
+      "Linux / Ubuntu",
+      "Nginx Reverse Proxy",
+      "PM2 Process Manager",
+      "Docker",
+      "GitHub Actions (CI/CD)",
+      "Postman",
+    ],
     Backend: [
       "Node.js",
       "NestJS",
@@ -48,7 +58,7 @@ export const site = {
     ],
     Frontend: ["React.js", "Next.js", "HTML5", "CSS3", "Tailwind CSS", "Responsive UI"],
     Databases: ["MySQL", "MongoDB", "Query optimization"],
-    "Cloud & DevOps": ["AWS (EC2)", "Linux", "Nginx", "PM2", "Git", "GitHub Actions", "Postman"],
+    Languages: ["TypeScript", "JavaScript (ES6+)", "SQL", "Java", "C++"],
     OpenSource: ["NPM (dheeraj08)", "MIT packages", "Semantic versioning"],
   },
   experience: [

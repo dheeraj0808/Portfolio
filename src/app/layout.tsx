@@ -21,14 +21,14 @@ const mono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dheeraj Singh | Backend Software Engineer — NestJS, RBAC, Payments",
+  title: "Dheeraj Singh | Software Engineer — Node.js, NestJS, TypeScript, React, SQL, AWS",
   description:
-    "Software Engineer L-1 at Epic Web Service. NestJS backends, 4-tier RBAC, Razorpay, Sequelize — builder of Wenuru and India-focused NPM packages (dheeraj08).",
+    "Software Engineer at Epic Web Service. TypeScript, Node.js, NestJS backends, React/Next.js, AWS (Amazon Web Services), Razorpay, Sequelize — builder of Wenuru, Vaidban, and NPM packages.",
   metadataBase: new URL("https://dheerajsinghportfolio.vercel.app"),
   openGraph: {
-    title: "Dheeraj Singh | Backend Software Engineer",
+    title: "Dheeraj Singh | Software Engineer",
     description:
-      "Production NestJS platforms, auth/RBAC, payments webhooks, and open-source NPM packages.",
+      "Production TypeScript & NestJS platforms, AWS cloud deployment, auth/RBAC, payments, and open-source NPM packages.",
     type: "website",
     url: "https://dheerajsinghportfolio.vercel.app",
   },
