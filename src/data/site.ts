@@ -205,7 +205,6 @@ export const site = {
     "Spotify-Backend",
     "Vaidban",
     "Vaani",
-    "gstin-utils",
   ] as const,
 };
 
