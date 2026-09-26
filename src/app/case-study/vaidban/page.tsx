@@ -13,7 +13,7 @@ export default function VaidbanCaseStudyPage() {
       <nav className="case-study-nav">
         <div className="container case-study-nav__inner">
           <Link href="/" className="btn btn-ghost btn-compact" style={{ fontWeight: 600 }}>
-            ← Back to Portfolio
+            ← Back<span className="hide-xs"> to Portfolio</span>
           </Link>
           <div style={{ display: "flex", gap: "0.75rem", alignItems: "center" }}>
             <a

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { site } from "@/data/site";
 
@@ -16,6 +16,15 @@ const links = [
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
 
   return (
     <header className="site-header">
@@ -44,7 +53,7 @@ export function SiteHeader() {
           </a>
           <button
             type="button"
-            className="nav-toggle"
+            className={`nav-toggle${open ? " nav-toggle--open" : ""}`}
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label={open ? "Close menu" : "Open menu"}

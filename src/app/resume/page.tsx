@@ -25,7 +25,7 @@ export default function ResumePage() {
           <Link href="/" style={{ fontWeight: 600 }}>
             ← Portfolio
           </Link>
-          <div style={{ display: "flex", gap: "0.65rem", flexWrap: "wrap" }}>
+          <div className="resume-toolbar__actions">
             <a
               className="btn btn-primary"
               href="/Dheeraj_Singh_Resume.pdf?v=20260927"
@@ -51,6 +51,27 @@ export default function ResumePage() {
         <p className="resume-viewer__note">
           {site.name} — {site.title} @ {site.company}
         </p>
+        {/* Mobile browsers can't reliably render PDFs inside an iframe. */}
+        <div className="resume-fallback">
+          <p>PDF previews are limited on phones. Open or download the resume instead.</p>
+          <div className="resume-fallback__actions">
+            <a
+              className="btn btn-primary"
+              href="/Dheeraj_Singh_Resume.pdf?v=20260927"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open resume
+            </a>
+            <a
+              className="btn btn-dark"
+              href="/Dheeraj_Singh_Resume.pdf?v=20260927"
+              download="Dheeraj_Singh_Resume.pdf"
+            >
+              Download PDF
+            </a>
+          </div>
+        </div>
         <iframe
           title="Dheeraj Singh Resume"
           src="/Dheeraj_Singh_Resume.pdf?v=20260927#view=FitH"
