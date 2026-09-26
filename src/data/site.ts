@@ -202,6 +202,7 @@ export const site = {
   ],
   /** GitHub repos to feature after Wenuru — curated for backend signal only */
   showcase: [
+    "my_daily_buddy_mobile",
     "Spotify-Backend",
     "Vaidban",
     "Vaani",
@@ -216,9 +217,26 @@ export const projectCopy: Record<
     highlights: string[];
     category: string;
     liveUrl?: string;
+    caseStudyUrl?: string;
     url?: string;
   }
 > = {
+  my_daily_buddy_mobile: {
+    name: "My Daily Buddy — Mobile App",
+    category: "Mobile",
+    blurb:
+      "All-in-one routine, habit, health and goal tracking companion for iOS & Android. Built with React Native 0.81, Expo Router, SecureStore OTP auth, 7-day Smart Catch-Up recovery, water/calorie tracking, and Razorpay subscriptions.",
+    highlights: [
+      "React Native",
+      "Expo SDK 54",
+      "TypeScript",
+      "Smart Catch-Up",
+      "Health & BMI",
+      "Razorpay",
+    ],
+    caseStudyUrl: "/case-study/my-daily-buddy",
+    url: "https://github.com/dheeraj0808/my_daily_buddy_mobile",
+  },
   "Spotify-Backend": {
     category: "Backend",
     blurb:
@@ -256,11 +274,6 @@ export const projectCopy: Record<
     category: "Frontend",
     blurb: "TypeScript Spotify clone UI paired with the Spotify-Backend API.",
     highlights: ["TypeScript", "Clone UI"],
-  },
-  my_daily_buddy_mobile: {
-    category: "Mobile",
-    blurb: "Expo / TypeScript mobile app exploration for productivity workflows.",
-    highlights: ["Expo", "TypeScript"],
   },
   "Bank-Transition-Backend": {
     category: "Backend",

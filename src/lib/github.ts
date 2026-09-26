@@ -78,6 +78,7 @@ export async function getShowcaseProjects(): Promise<Project[]> {
         "Project from github.com/dheeraj0808",
       url: copy?.url || repo?.html_url || "",
       liveUrl: live || undefined,
+      caseStudyUrl: copy?.caseStudyUrl || undefined,
       language: repo?.language ?? null,
       stars: repo?.stargazers_count ?? 0,
       category: copy?.category || "Other",
@@ -99,6 +100,7 @@ export async function getShowcaseProjects(): Promise<Project[]> {
           (name === "Spotify-Backend"
             ? "https://spotify-backend-3ouf.onrender.com/"
             : undefined),
+        caseStudyUrl: copy?.caseStudyUrl || undefined,
         language: null,
         stars: 0,
         category: copy.category,
