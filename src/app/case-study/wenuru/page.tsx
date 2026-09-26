@@ -391,14 +391,12 @@ await this.sequelize.transaction(async (t) => {
             <Link href="/" className="btn btn-ghost">
               Back to Portfolio
             </Link>
-            <a
-              href="/Dheeraj_Singh_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/resume"
               className="btn btn-ghost"
             >
               View Resume
-            </a>
+            </Link>
           </div>
         </section>
       </main>

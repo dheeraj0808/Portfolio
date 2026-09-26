@@ -31,14 +31,9 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="header-actions">
-          <a
-            href="/Dheeraj_Singh_Resume.pdf"
-            className="btn btn-ghost btn-compact"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href="/resume" className="btn btn-ghost btn-compact">
             Resume
-          </a>
+          </Link>
           <a
             href={site.github}
             className="btn btn-primary btn-compact hide-sm"
@@ -71,6 +66,9 @@ export function SiteHeader() {
               {l.label}
             </Link>
           ))}
+          <Link href="/resume" onClick={() => setOpen(false)}>
+            Resume
+          </Link>
           <a
             href={site.github}
             target="_blank"

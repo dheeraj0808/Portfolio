@@ -4,7 +4,7 @@ import { site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Resume | Dheeraj Singh",
-  description: "Resume — Dheeraj Singh, Backend-Focused Software Engineer at Epic Web Service",
+  description: "Resume — Dheeraj Singh, Software Engineer at Epic Web Service",
 };
 
 /** Resume route opens / downloads the real PDF resume file. */
@@ -28,7 +28,7 @@ export default function ResumePage() {
           <div style={{ display: "flex", gap: "0.65rem", flexWrap: "wrap" }}>
             <a
               className="btn btn-primary"
-              href="/Dheeraj_Singh_Resume.pdf"
+              href="/Dheeraj_Singh_Resume.pdf?v=20260927"
               download="Dheeraj_Singh_Resume.pdf"
               style={{ padding: "0.55rem 1rem" }}
             >
@@ -36,7 +36,7 @@ export default function ResumePage() {
             </a>
             <a
               className="btn btn-ghost"
-              href="/Dheeraj_Singh_Resume.pdf"
+              href="/Dheeraj_Singh_Resume.pdf?v=20260927"
               target="_blank"
               rel="noopener noreferrer"
               style={{ padding: "0.55rem 1rem" }}
@@ -53,7 +53,7 @@ export default function ResumePage() {
         </p>
         <iframe
           title="Dheeraj Singh Resume"
-          src="/Dheeraj_Singh_Resume.pdf#view=FitH"
+          src="/Dheeraj_Singh_Resume.pdf?v=20260927#view=FitH"
           className="resume-frame"
         />
       </div>
